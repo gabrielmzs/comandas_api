@@ -11,7 +11,7 @@ content-type: application/json
 {
     "nome" : "Abc da Silva",
     "cpf" : "01923874656",
-    "telefone" : "49988234567",
+    "telefone" : "49988234567"
     
 }
 
@@ -22,7 +22,7 @@ content-type: application/json
 {
     "nome" : "Bolinhas dos Testes",
     "cpf" : "12345678909",
-    "telefone" : "49898989",
+    "telefone" : "49898989"
     
 }
 ### Verbo DELETE - excluir

@@ -24,3 +24,5 @@ def put_funcionario(id: int, f: Funcionario):
 @router.delete("/funcionario/{id}", tags=["Funcionário"])
 def delete_funcionario(id: int):
     return {"msg": "delete executado"}, 201
+
+# Gabriel Menezes

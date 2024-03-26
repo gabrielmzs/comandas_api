@@ -8,3 +8,4 @@ class Produto(BaseModel):
     foto: bytes
     valor: Decimal
     
+# Gabriel Menezes

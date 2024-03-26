@@ -24,3 +24,5 @@ def put_cliente(id: int, c: Cliente):
 @router.delete("/cliente/{id}", tags=["Cliente"])
 def delete_cliente(id: int):
     return {"msg": "delete executado"}, 201
+
+# Gabriel Menezes

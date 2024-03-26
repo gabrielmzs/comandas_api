@@ -6,3 +6,5 @@ class Cliente(BaseModel):
     cpf: str
     telefone: str = None
     
+
+# Gabriel Menezes

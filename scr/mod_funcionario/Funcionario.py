@@ -8,3 +8,5 @@ class Funcionario(BaseModel):
     telefone: str = None
     grupo: int
     senha: str = None
+
+    #Gabriel Menezes
