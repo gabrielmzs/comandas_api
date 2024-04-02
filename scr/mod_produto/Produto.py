@@ -5,7 +5,7 @@ class Produto(BaseModel):
     id_produto: int = None
     nome: str
     descricao : str
-    foto: bytes
-    valor: Decimal
+    foto: str
+    valor: str
     
 # Gabriel Menezes
