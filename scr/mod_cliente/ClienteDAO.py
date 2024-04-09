@@ -1,14 +1,19 @@
+# import da segurança
+from typing import Annotated
+from fastapi import Depends
+from security import get_current_active_user, User
+
 from fastapi import APIRouter
 from mod_cliente.Cliente import Cliente
 
 import db
 from mod_cliente.ClienteModel import ClienteDB
 
-router = APIRouter()
+router = APIRouter(dependencies=[Depends(get_current_active_user)])
 
 # Criar os endpoints de Cliente: GET, POST, PUT, DELETE
 
-@router.get("/cliente/", tags=["Cliente"])
+@router.get("/cliente/", tags=["Cliente"],dependencies=[Depends(get_current_active_user)],)
 def get_cliente():
     try:
         session = db.Session()
