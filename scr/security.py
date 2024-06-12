@@ -29,6 +29,7 @@ db_clientes_api = {
 class Token(BaseModel):
     access_token: str
     token_type: str
+    expire_minutes: int
 
 class TokenData(BaseModel):
     username: str| None = None
@@ -111,7 +112,7 @@ async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm,
 
     access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     access_token = create_access_token(data={"sub": user.username}, expires_delta=access_token_expires)
-    return Token(access_token=access_token, token_type="bearer")
+    return Token(access_token=access_token, token_type="bearer", expire_minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
 
 @router.get("/token/logado", response_model=User)
 async def read_users_me(current_user: Annotated[User, Depends(get_current_active_user)],):
